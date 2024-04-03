@@ -144,7 +144,57 @@ ReactDOM.render(
     document.getElementById('root')
 ); -->
 
-## 3월 27일 강의 내용
+
+5.5 컴포넌트 추출
+
+- 복잡한 컴포넌트를 쪼개서 여러 개의 컴포넌트로 나눌 수도 있습니다.
+
+- 큰 컴포넌트에서 일부를 추출해서 새로운 컴포넌트를 만드는 것입니다.
+
+- 실무에서는 처음부터 1개의 컴포넌트에 하나의 기능만 사용하도록 설계하는 것이 좋습니다.
+
+- Comment는 댓글 표시 컴포넌트입니다.
+
+- 내부에는 이미지, 이름, 댓글과 작성일이 포함되어 있습니다.
+
+- 첫 번째로 이미지 부분을 Avatar 컴포넌트로 추출해보겠습니다.
+
+- 두 번째로 사용자 정보 부분을 추출합니다.
+
+- 컴포넌트 이름은 UserInfo로 합니다. React 컴포넌트 이름은 Camel notatio을 사용합니다.
+
+- UserInfo 안에 Avatar 컴포넌트를 넣어서 완성시킵니다.
+
+<!-- function UserInfo(props) {
+    return (
+        <div className="user-info">
+            <Avatar user={props.user} />
+            <div className="user-info-name">
+                {props.user.name}
+            </div>
+        </div>    
+    );
+} -->
+
+- 추출 후 다시 결합한 UserInfo를 Comment 컴포넌트 반영하면 다음과 같은 모습이 됩니다.
+
+- 처음에 비해서 가독성이 높아진 것을 확인할 수 있습니다.
+
+<!-- function Comment(props) {
+    return (
+        <div className="comment">
+            <UserInfo user={props.author} />
+            <div className="comment=text">
+                {props.text}
+            </div>
+            <div className="comment-date">
+                {formatDate(props.date)}
+            </div>
+        </div>
+    );
+} -->
+
+s## 3월 27일 강의 내용
 
 4.1 엘리먼트에 대해 알아보기
 
