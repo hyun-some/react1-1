@@ -6,6 +6,8 @@
 
 ## 4월 3일 강의 내용
 
+https://github.com/soaple/first-met-react-practice-v18
+
 5.1 컴포넌트에 대해 알아보기
 
 - 2장에서 설명한 바와 같이 리액트는 컴포넌트 기반의 구조를 같습니다.
