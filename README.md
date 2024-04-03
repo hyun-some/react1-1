@@ -7,6 +7,7 @@
 ## 4월 3일 강의 내용
 
 https://github.com/soaple/first-met-react-practice-v18
+6장 실습의 코드를 클래스형으로 되어있으니까 function 함수로 바꾸기 집가서
 
 5.1 컴포넌트에 대해 알아보기
 
