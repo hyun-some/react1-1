@@ -223,6 +223,46 @@ Chapter6. state와 생명주기
 
 - 함수형에서는 useState()라는 함수 사용합니다.
 
+- state는 변경은 가능하다고 했지만 직접 수정해서는 안됩니다.
+
+- 불가능하다고 생각하는 것이 좋습니다.
+
+- state를 변경하고자 할 때는 setstate()함수를 사용합니다.
+
+//state를 직접 수정(잘못된 사용법)
+this.stae = {
+    name: 'Inje'
+};
+
+// setState 함수를 통한 수정 (정상적인 사용법)
+this. setState({
+    name: 'Inje'
+});
+
+
+[component vs. element vs. instance]
+교재에는 나와 있지 않지만 여기서 component, element, instance의 의미에 대해 확인해 보도록 하겠습니다.
+
+element : 재료 
+component : 빵 틀 
+instance : 재료를 빵 틀에 넣고 만든 빵
+
+6.2 생명주기에 대해 알아보기
+
+- 생명주기는 컴포넌트의 생성 시점, 사용 시점, 종료 시점을 나타내는 것입니다.
+
+- constructor 가 실행 되면서 컴포넌트가 생성됩니다
+
+- 생성 직후 componentDidMount()함수가 호출됩니다.
+
+- 컴포넌트가 소멸하기 전까지 여러번 렌더링 합니다.
+
+- 렌더링은 props, setState(), forceUpdate()에 의해 상태가 변경되면 이루어집니다.
+
+- 그리고 렌더링이 끝나면 componentDinUpdate() 함수가 호출됩니다.
+
+- 마지막으로 컴포넌트가 언마운트 되면 compomentWillUnmount() 함수가 호출됩니다.
+
 ## 3월 27일 강의 내용
 
 4.1 엘리먼트에 대해 알아보기
