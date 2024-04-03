@@ -77,6 +77,73 @@ All React components must act like pure functions with respect to their props.
 
 
 
+5.3 컴포넌트 만들기
+
+1. 컴포넌트의 종류
+
+- 리액트 초기 버전을 사용할 때는 클래스형 컴포넌트를 주로 사용했습니다.
+
+- 이후 Hook이라는 개념이 나오면서 최근에는 함수형 컴포넌트를 주로 사용합니다.
+
+- 예전에 작성된 코드나 문서들이 클래스형 컴포넌트를 사용하고 있기 때문에, 
+
+- 클래스형 컴포넌트와 컴포넌트의 생명주기에 관해서도 공부해 두어야 합니다.
+
+2. 함수형 컴포넌트
+
+- Welcome컴포넌트는 props를 받아, 받은 props중 name키의 값을 "안녕,"뒤에 넣어 반환합니다.
+
+3. 클래스형 컴포넌트
+
+- Welcome컴포넌트는 React.Component class로 부터 상속을 받아 선언합니다.
+
+4. 컴포넌트 이름 짓기
+
+- 이름은 항상 대문자로 시작합니다.
+- 왜냐하면 리액트는 소문자로 시작하는 컴포넌트를 DOM태그로 인식하기 때문입니다. html tag, 
+- 컴포넌트 파일 이름과 같은 컴포넌트 이름은 같게 합니다.
+
+5. 컴포넌트의 렌더링
+
+- 렌더링의 과정은 다음 코드와 같습니다.
+
+<!-- function Welcome(props) {
+    return <h1>안녕, {props.name}</h1>;
+}
+
+const element = <WWelcome name="인제" />;
+ReactDOM.render(
+    element,
+    document.getElementById('root')
+); -->
+
+5.4 컴포넌트 합성
+
+- 컴포넌트 합성은 여러 개의 컴포넌트를 합쳐서 하나의 컴포넌트를 만드는 것입니다.
+
+- 리액트에서는 컴포넌트 안에 또 다른 컴포넌트를 사용할 수 있기 때문에, 복잡한 화면을 여러 개의 컴포넌트로 나누어 구현할 수 있습니다.
+
+- 다음 코드에서는 props의 값을 다르게 해서 Welcome 컴포넌틀르 여러 번 사용합니다.
+
+<!-- function Welcome(props) {
+    return <h1>Hello, {props.name}</h1>;
+}
+
+function App(props) {
+    return ( 
+        <div>
+            <Welcomd name="Mike" />
+            <Welcomd name="Steve" />
+            <Welcomd name="Jane" />
+        </div>
+    )
+}
+
+ReactDOM.render(
+    <App />,
+    document.getElementById('root')
+); -->
+
 ## 3월 27일 강의 내용
 
 4.1 엘리먼트에 대해 알아보기
