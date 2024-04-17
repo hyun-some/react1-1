@@ -91,11 +91,32 @@ useEffect(이펙트 함수, 의존성 배열)
 
 - 따라서 의존성 배열을 넣지 않는 것은 의미가 없습ㄴ디ㅏ.
 
-- 만약 빈 배열ㅇ르 넣게 되면 컴포넌트 마운트 시에만 함수가 실행됩니다.
+- 만약 빈 배열을 넣게 되면 컴포넌트 마운트 시에만 함수가 실행됩니다.
 
 //const memoizedValue = useMemo(
     () => computeExpensiveValue(a,b)
 );
+
+7.5 useCallback
+
+- useCallback() 훅은 useMemo()와 유사한 역할을 합니다.
+
+- 차이점은 값이 아닌 함수를 반환한다는 점입니다.
+
+- 의존성 배열을 파라미터로 받는 것은 useMemo와 동일 합니다.
+
+- 파라미터로 받은 함수를 콜백이라고 부릅니다.
+
+- useMemo와 마찬가지로 의존성 배열 중 하나라도 변경되면 콜백함수를 반환합니다.
+
+//const memoizedCallback = useCallback(
+    () => {
+        doSomething(의존성 변수1, 의존성 변수2);
+    },
+    [의존성 변수1, 의존성 변수2]
+);
+
+
 
 ## 4월 3일 강의 내용
 
