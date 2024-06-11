@@ -168,6 +168,52 @@
 
 - 하위 컴포넌트를 consumer 컴포넌트라고 부릅니다.
 
+[3] Class.contextType
+
+- Provider 하위에 있는 클래스 컴포넌트에서 컨텍스트의 데이터에 접근하기 위해 사용합니다.
+
+- Class 컴포넌트는 더 이상 사용하지 않으므로 참고만 합니다.
+
+[4] Context.Consumer
+
+- 함수형 컴포넌트에서 Context.Consumer를 사용하여 컨텍스트를 구독할 수 있습니다.
+
+- 컴포넌트의 자식으로 함수가 올 수 있는데 이것을 function as a child라고 부릅니다.
+
+- Context.Consumer로 감싸주면 자식으로 들어간 함수가 현재 컨텍스트의 value를 받아서 리액트 노드로 리턴합니다.
+
+- 함수로 전달되는 value는 Provider의 value prop과 동일합니다.
+
+[5] Context.displayName
+
+- 컨텍스트 객체는 displayName 이라는 문자열 속성을 갖습니다.
+
+- 크롬의 리액트 개발자 도구에서는 컨텍스트의 Provider나 Consumer를 표시할 때 displayName을 함께 표시해 줍니다.
+
+14.5 여러 개의 컨텍스트 사용하기
+
+- 여러 개의 컨텍스트를 동시에 사용하려면 Context.Provider를 중첩해서 사용합니다.
+
+- 예제에서는 ThemeContext와 UserContext를 중첩해서 사용하고 있습니다.
+
+- 이런 방법으로 여러 개의 컨텍스트를 동시에 사용할 수 있습니다.
+
+- 하지만 두 개 똔느 그 이상의 컨텍스트 값이 자주 함께 사용될 경우 모든 값을 한 번에 제공해 주는 별도의 render prop 컴포넌트를 직접 만드는 것을 고려하는 것이 좋습니다.
+
+14.6 useContext
+
+- 함수형 컴포넌트에서 컨텍스트를 사용하기 위해 컴포넌트를 매번 Consumer 컴포넌트로 감싸주는 것보다 더 좋은 방법이 있습니다. 바로 7장에서 배운 Hook입니다.
+
+- useContext() 훅은 React.createContext() 함수 호출로 생성된 컨텍스트 객체를 인자로 받아서 현재 컨텍스트의 값을 리턴합니다.
+
+- 이 방법도 가장 가까운 상위 Provider로 부터 컨텍스트의 값을 받아옵니다.
+
+- 만일 값이 변경되면 useContext()훅을 사용하는 컴포넌트가 재 렌더링 됩니다.
+
+- 또한 useContext() 훅을 사용할 때에는 파라미터로 컨텍스트 객체를 넣어줘야 한다는 것을 기억해야 합니다.
+
+
+
 
 
 ## 6월 5일 강의 내용
