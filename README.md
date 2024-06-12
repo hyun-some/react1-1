@@ -57,6 +57,44 @@ first-child: last-child는 상위 엘리먼트를 기준으로 각각 첫번째 
 
 - inline-block는 기본적으로 inline의 특성을 갖지만, with와 height 등 block의 특성을 사용할 수 있습니다.
 
+- block 과 inline태그는 다음과 같다
+Block: <div> <table> <h1>~<h6><p> <form><ul><ol><li><dl><dt><dd><pre>
+Inline:<span><a><br><em><strong><input><label><img>
+
+flex는 컨테이너의 형태로 엘리먼트를 관리
+
+- visibility 속성은 엘리먼트의 가시성을 정의합니다.
+
+- display:none과 visibility:hidden의 차이
+- display:none은 엘리먼트의 영역이 보이지 않고, visibility:hidden는 차지하는 영역은 보입니다.
+
+- position 속성은 엘리먼트를 어떻게 위치시킬 것인지를 정의합니다.
+
+- static은 원래 순서대로 위치시킵니다
+
+- flxed는 window에 ㅅ 라고 정의하지만 지금은 sticky로 바뀌었습니다.
+
+- relative는 절대적 위치를 지정합니다.
+
+15.2 styled-components
+
+- css문법을 그대로 사용하면서 결과물을 스타일링된 컴포넌트 형태로 만들어 주는 오픈소스 라이브러리입니다.
+
+- 컴포넌트의 개념을 사용하고 있어 리액트 개발에 많이 사용도비니다.
+
+1. styled-components 설치하기
+
+- npm install --save styled-components
+npm v5부터는 사용안해도됨 자동추가
+
+2. styled-components 기본 사용법
+
+- 태그드 템플릿 리터럴을 사용하여 구성 요소의 스타일을 지정합니다.
+
+- 태그드 템플릿 리터럴은 자바스크립트에서 제공하는 문법 중 하나로 리터럴을 템플릿 형태로 사용하는 것입니다.
+
+- styled `...`의 형태로 정의한 후 컴포넌트를 생성해서 사용합니다.
+
 
 ## 6월 11일 강의 내용
 
